@@ -1,6 +1,7 @@
 const { fetchGitHubProfile } = require("../utils/githubUtils");
 const { generateCompatibility } = require("../utils/groqClient");
 const { sendCompatibilityEmail } = require("../utils/emailUtils.js");
+const AppError = require("../utils/appError");
 
 const catchAsync = require("../utils/catchAsync");
 
