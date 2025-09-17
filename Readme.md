@@ -28,8 +28,6 @@ A web app that calculates compatibility between two GitHub users by analyzing th
 
 A web app that calculates compatibility between two GitHub users by analyzing their profiles and README content. It generates a percentage score and a message, then sends a styled email with avatars, names, and results.
 
-**Deployed Version:** [https://git-story.onrender.com/](https://git-story.onrender.com/)
-
 ## API
 
 ### POST `/api/calculate`
@@ -55,6 +53,7 @@ Returns a JSON response with the compatibility score and message, and sends a st
 - **Backend:** Node.js, Express
 - **Email Service:** SendGrid
 - **AI Engine:** OpenAI GPT via Groq client
+- **External API:** Github Public API
 - **Email Templates:** HTML/CSS
 - **Deployment:** Render
 
