@@ -38,8 +38,11 @@ const calculateCompatibility = catchAsync(async (req, res, next) => {
     compatibility.funny_message,
     compatibility.compatibility_percent
   );
-  
-  res.json({ success: true, data: compatibility });
+
+  res.json({
+    success: true,
+    message: "Check your email for the surprise ( probably in spam )",
+  });
 });
 
 module.exports = { calculateCompatibility };
