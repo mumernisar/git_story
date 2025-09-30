@@ -17,6 +17,12 @@ const client = axios.create({
   headers: { "User-Agent": "github-love-compatibility/1.0" },
 });
 
+if (process.env.GITHUB_TOKEN) {
+  console.log("Using GitHub token for authenticated requests");
+  client.defaults.headers.common.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+}
+client.defaults.headers.common.Accept = "application/vnd.github+json";
+
 // Retry on network errors and 5xx responses, with exponential backoff
 axiosRetry(client, {
   retries: 2,
